@@ -11,7 +11,7 @@ Before continuing, the assumptions I've done:
 To get straight to the point, this are the different endpoints to test the app (assuming you've started it on localhost):
   - GET: http://localhost:8080/transactions ; which searches a list of transactions and has two optional request params (account_id and sort [that can be ASC or DESC -- if mistaken, will be taken as DESC])
   - GET: http://localhost:8080/transactions/{reference} ; which searches a unique transaction by its reference
-  - POST: GET: http://localhost:8080/transactions ; which takes a Transaction object and creates it (if possible)
+  - POST: http://localhost:8080/transactions ; which takes a Transaction object and creates it (if possible)
   - POST: http://localhost:8080/transactions/status ; which takes the status input (reference and channel [opt]) and gives back the required status output.
 
 In order to create this application, which has several functionalities (find all transactions, find one transaction, create a transaction, check transaction status), the DB model I've created consists of two entities (transactions and accounts) that are related through a FK in transactions.
